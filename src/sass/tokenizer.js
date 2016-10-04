@@ -347,7 +347,7 @@ module.exports = function(css, tabSize) {
           // skip the next character so as not to double count newlines or
           // columns etc
           if (c === '\r') {
-            pushToken(TokenType.Newline, '\r\n', col);
+            pushToken(TokenType.Newline, '\n', col);
             pos++; // If CRLF skip the next character and push crlf token
           } else if (c === '\n') {
             // If just a LF newline and not part of CRLF newline we can just
