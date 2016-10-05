@@ -260,7 +260,7 @@ module.exports = function(css, tabSize) {
       }
     } else {
       for (pos += 2; pos < css.length; pos++) {
-        if (css.charAt(pos) === '\n') {
+        if (css.charAt(pos) === '\n' || css.charAt(pos) === '\r') {
           // Get new line's indent level:
           var _il = 0;
           for (_pos = pos + 1; _pos < css.length; _pos++) {
